@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+    list-style: none;
+    text-decoration: none;
+}
+
+.banner_covid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(2, 8, 34);
+    font-size: 0.8em;    
+}
+
+.logo img{
+    width: 120px;
+}
+
+.banner_covid a{
+    color: white;
+}
+
+.container_header{
+    width: 100%;
+    margin: 0 auto;
+    background-image: url(../Desing/Curve\ Line.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.content_header{
+    height: 90px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu{
+    max-width: 1440px;
+    height: 100%;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+nav > ul > li{
+    height: 100%;
+    align-content: center;
+    list-style: none;
+    position: relative;
+    list-style-type: none;
+    padding: 0px 30px;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background-color: rgb(2, 8, 34);
+    /*box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);*/
+    color: black;
+    align-content: center;
+    margin-left: 3px;
+}
+
+nav ul li{
+    align-content: center;
+    align-items: center;
+}
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    padding: 14px 0px 14px 14px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    transition: all 300ms ease;
+    list-style-type: none;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 40px;
+}
+
+nav ul li ul a{
+    display: block;
+    padding: 0px 20px;
+    margin-left: px;
+    margin-top: px;
+    transition: all 300ms ease;
+    color: black;
+}
+
+nav ul li ul a:hover{
+    background-color:rgb(8, 24, 97);
+    color: white;
+    transform: scale(1.2);
+    padding-left: px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    
+}
+
+button{
+    color: white;
+    background: rgb(34,164,195);
+    background: linear-gradient(101deg, rgba(34,164,195,1) 0%, rgba(34,107,195,1) 54%, rgba(45,210,253,1) 100%);
+    border-radius: 20px;
+    width: 10em;
+    height: 3em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.banner_center{
+    width: 1440px;
+}
+
+
