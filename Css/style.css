@@ -142,8 +142,47 @@ button{
     cursor: pointer;
 }
 
-.banner_center{
+.container{
     width: 1440px;
+    height: 600px;
+    margin: auto;
 }
 
 
+.photobanner {
+    height: 100px; 
+    width: 100%; 
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+} 
+.photobanner img {
+    margin-top: 20px;
+    width: 290px;
+    height: 350px;
+    transition: ease 0.5s; 
+    object-fit: cover;
+}
+
+.photobanner img:hover { 
+    transform: scale(1.1); 
+    cursor: pointer; 
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2); }
+
+footer{
+
+}
+
+.container_footer{
+    
+}
+
+.content_footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo_footer img{
+    width: 70px;
+}
+    
