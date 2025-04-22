@@ -1,110 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-    <title>Rosalba Rojas-Odontoclinic</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosalba Rojas - OdontoClinic</title>
+
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2XxUHBH5I0v+2IO7tXgJq9W9+zZjqGvFzYQ3V6jQ1d7Q6U9vRmc7wPZpM8Yv2XBz2G5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="Css/style.css" />
+  <style>
+    /* Responsive menu */
+    @media (max-width: 768px) {
+      .content_header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+
+      nav > ul {
+        flex-direction: column;
+        background-color: #020822;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      nav.active > ul {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="banner_covid">
-        <h3><a href="#">Ver Protocolo Covid-19</a></h3>
+  <!-- Banner Covid -->
+  <div class="banner_covid">
+    <h3><a href="#">Ver Protocolo Covid-19</a></h3>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="container_header">
+    <div class="content_header">
+      <div class="logo">
+        <img src="Desing/logo-removebg-preview.png" alt="Logo OdontoClinic" />
+      </div>
+      <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li>Tratamientos
+              <ul>
+                <li><a href="#">Odonto-Pediatría</a></li>
+                <li><a href="#">Diseño de Sonrisa</a></li>
+                <li><a href="#">Ortodoncia</a></li>
+                <li><a href="#">Implantología</a></li>
+                <li><a href="#">Estética</a></li>
+                <li><a href="#">Blanqueamiento</a></li>
+                <li><a href="#">Brackets</a></li>
+              </ul>
+            </li>
+            <li>Promociones & Eventos
+              <ul>
+                <li><a href="#">Descuentos</a></li>
+                <li><a href="#">Sorteos</a></li>
+                <li><a href="#">Charlas</a></li>
+              </ul>
+            </li>
+            <li>Compañía
+              <ul>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Equipo</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Vacantes</a></li>
+              </ul>
+            </li>
+            <li>Conéctate
+              <ul>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Convenio UniMagdalena</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button>Agenda Tu Cita</button>
     </div>
-    <header class="container_header">
-        <div class="content_header">
-            <div class="logo"><img src="Desing/logo-removebg-preview.png" alt="" srcset=""></div>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li>Tratamientos
-                            <ul>
-                                <li><a href="#">Odonto-Pediatria</a></li>
-                                <li><a href="#">Diseño de Sonrisa</a></li>
-                                <li><a href="#">Ortodoncia</a></li>
-                                <li><a href="#">Implantologia</a></li>
-                                <li><a href="#">Estetica</a></li>
-                                <li><a href="#">Blanqueamiento</a></li>
-                                <li><a href="#">Brakets</a></li>
-                            </ul>
-                        </li>
-                        <li>Promociones & Eventos
-                            <ul>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                            </ul>
-                        </li>
-                        <li>Company
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </li>
-                        <li>Connect
-                            <ul>
-                                <li><a href="[#]">Contact</a></li>
-                                <li><a href="[#]">Gallery</a></li>
-                                <li><a href="[#]">Convenio Uni-Magdalena</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <button>Agenda Tu Cita</button>
-        </div>
-    </header>
+  </header>
 
-    <section class="container">
-        <div class="photobanner">
-
-            <img src="Desing/ortodoncia.jpg" alt="" srcset="">
-            <img src="Desing/1678213498081.jpg" alt="" srcset="">
-            <img src="Desing/pediatria.jpg" alt="" srcset="">
-            <img src="Desing/sonrisas.jpg" alt="" srcset="">
-        </div>
+  <!-- Galería de Imágenes -->
+  <main class="container">
+    <section class="photobanner">
+      <img src="Desing/ortodoncia.jpg" alt="Ortodoncia" />
+      <img src="Desing/1678213498081.jpg" alt="Paciente Sonriendo" />
+      <img src="Desing/pediatria.jpg" alt="Odontología Pediátrica" />
+      <img src="Desing/sonrisas.jpg" alt="Diseño de Sonrisa" />
     </section>
 
-    <footer class="container_footer">
-        <div class="content_footer">
-            <div class="logo_footer"><img src="Desing/logo-removebg-preview.png" alt="" srcset=""></div>
-            <ul>
-                <li><a href="">Tratamientos</a></li>
-                <li><a href="#">Citas</a></li>
-                <li><a href="#">Promociones & Eventos</a></li>
-                <li><a href="#">Equipo Humano</a></li>
-            </ul>
-            <ul>
-                <li><a href="">Company</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Galeria</a></li>
-            </ul>
-            <ul>
-                <li><a href="">Noti-clinic</a></li>
-                <li><a href="[#]">Contacto</a></li>
-                <li><a href="[#]">Sugerencias</a></li>
-                <li><a href="[#]">LinkedIn</a></li>
-            </ul>
-
-            <div class="redes">
-                <img src="Desing/facebook.png" alt="" srcset="" width="30px">
-                <img src="Desing/gorjeo.png" alt="" srcset="" width="30px">
-                <img src="Desing/instagram.png" alt="" srcset="" width="30px">
-            </div>
+    <!-- Testimonios -->
+    <section style="text-align: center; padding: 60px 20px;">
+      <h2 style="margin-bottom: 40px; font-size: 2em;">Lo que dicen nuestros pacientes</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+        <div style="background: white; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+          <p>"Excelente servicio y un trato muy humano. 100% recomendado."</p>
+          <strong>- Camila M.</strong>
         </div>
-    </footer>
+        <div style="background: white; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+          <p>"Gracias a la clínica recuperé mi sonrisa. El diseño de sonrisa fue perfecto."</p>
+          <strong>- Juan R.</strong>
+        </div>
+        <div style="background: white; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+          <p>"Mis hijos aman venir. La odonto-pediatría es espectacular."</p>
+          <strong>- Luisa G.</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="container_footer">
+    <div class="content_footer">
+        
+      <div class="logo_footer">
+        <img src="Desing/logo-removebg-preview.png" alt="Logo OdontoClinic" />
+      </div>
+      <ul>
+        <li><a href="#">Tratamientos</a></li>
+        <li><a href="#">Citas</a></li>
+        <li><a href="#">Promociones & Eventos</a></li>
+        <li><a href="#">Equipo Humano</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Compañía</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Galería</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Noti-clinic</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Sugerencias</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+      <div class="redes">
+        <a href="#"><img src="Desing/facebook.png" alt="Facebook" width="30px" /></a>
+        <a href="#"><img src="Desing/gorjeo.png" alt="Twitter" width="30px" /></a>
+        <a href="#"><img src="Desing/instagram.png" alt="Instagram" width="30px" /></a>
+      </div>
+    </div>
+    <div class="footer_bottom">
+        © 2025 OdontoClinic Rosalba Rojas. Todos los derechos reservados.
+        <a href="#">Política de privacidad</a> |
+        <a href="#">Términos y condiciones</a>
+      </div>
+      
+  </footer>
 </body>
 
 </html>
