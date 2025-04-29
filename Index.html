@@ -13,57 +13,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2XxUHBH5I0v+2IO7tXgJq9W9+zZjqGvFzYQ3V6jQ1d7Q6U9vRmc7wPZpM8Yv2XBz2G5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Estilos principales -->
   <link rel="stylesheet" href="Css/style.css" />
   <style>
-    /* Responsive menu */
-    @media (max-width: 768px) {
-      .content_header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-      }
-
-      nav > ul {
-        flex-direction: column;
-        background-color: #020822;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        display: none;
-      }
-
-      nav.active > ul {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-      }
+    /* Estilo del formulario de citas */
+    #citaForm {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      z-index: 1000;
+      width: 90%;
+      max-width: 400px;
+    }
+    #citaForm h2 {
+      margin-bottom: 20px;
+      color: #226bc3;
+      text-align: center;
+    }
+    #citaForm input, #citaForm textarea, #citaForm select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    #citaForm button {
+      background-color: #226bc3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+    #citaForm button:hover {
+      background-color: #004ea8;
+    }
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    /* Mejora visual del botón en el header */
+    .content_header button {
+      background: linear-gradient(101deg, #22a4c3, #226bc3, #2dd2fd);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .content_header button:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 
 <body>
-  <!-- Banner Covid -->
   <div class="banner_covid">
     <h3><a href="#">Ver Protocolo Covid-19</a></h3>
   </div>
 
-  <!-- Encabezado -->
   <header class="container_header">
     <div class="content_header">
       <div class="logo">
         <img src="Desing/logo-removebg-preview.png" alt="Logo OdontoClinic" />
-      </div>
-      <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
-        <i class="fas fa-bars"></i>
       </div>
       <div class="menu">
         <nav>
@@ -79,22 +110,16 @@
                 <li><a href="#">Brackets</a></li>
               </ul>
             </li>
-            <li>Promociones & Eventos
+            <li>Promociones & Eventos</li>
+            <li>Company
               <ul>
-                <li><a href="#">Descuentos</a></li>
-                <li><a href="#">Sorteos</a></li>
-                <li><a href="#">Charlas</a></li>
-              </ul>
-            </li>
-            <li>Compañía
-              <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Equipo</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Vacantes</a></li>
+                <li><a href="#">Careers</a></li>
               </ul>
             </li>
-            <li>Conéctate
+            <li>Connect
               <ul>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Galería</a></li>
@@ -104,46 +129,22 @@
           </ul>
         </nav>
       </div>
-      <button>Agenda Tu Cita</button>
+      <button onclick="abrirFormularioCita()">Agenda Tu Cita</button>
     </div>
   </header>
 
-  <!-- Galería de Imágenes -->
-  <main class="container">
-    <section class="photobanner">
-      <img src="Desing/ortodoncia.jpg" alt="Ortodoncia" />
-      <img src="Desing/1678213498081.jpg" alt="Paciente Sonriendo" />
-      <img src="Desing/pediatria.jpg" alt="Odontología Pediátrica" />
-      <img src="Desing/sonrisas.jpg" alt="Diseño de Sonrisa" />
-    </section>
+  <section class="container">
+    <div class="photobanner">
+      <img src="Desing/ortodoncia.jpg" alt="Ortodoncia">
+      <img src="Desing/1678213498081.jpg" alt="Paciente Sonriente">
+      <img src="Desing/pediatria.jpg" alt="Odontología Pediátrica">
+      <img src="Desing/sonrisas.jpg" alt="Diseño de Sonrisa">
+    </div>
+  </section>
 
-    <!-- Testimonios -->
-    <section style="text-align: center; padding: 60px 20px;">
-      <h2 style="margin-bottom: 40px; font-size: 2em;">Lo que dicen nuestros pacientes</h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-        <div style="background: white; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-          <p>"Excelente servicio y un trato muy humano. 100% recomendado."</p>
-          <strong>- Camila M.</strong>
-        </div>
-        <div style="background: white; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-          <p>"Gracias a la clínica recuperé mi sonrisa. El diseño de sonrisa fue perfecto."</p>
-          <strong>- Juan R.</strong>
-        </div>
-        <div style="background: white; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-          <p>"Mis hijos aman venir. La odonto-pediatría es espectacular."</p>
-          <strong>- Luisa G.</strong>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Pie de página -->
   <footer class="container_footer">
     <div class="content_footer">
-        
-      <div class="logo_footer">
-        <img src="Desing/logo-removebg-preview.png" alt="Logo OdontoClinic" />
-      </div>
+      <div class="logo_footer"><img src="Desing/logo-removebg-preview.png" alt="Logo footer"></div>
       <ul>
         <li><a href="#">Tratamientos</a></li>
         <li><a href="#">Citas</a></li>
@@ -151,7 +152,7 @@
         <li><a href="#">Equipo Humano</a></li>
       </ul>
       <ul>
-        <li><a href="#">Compañía</a></li>
+        <li><a href="#">Company</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Galería</a></li>
@@ -163,18 +164,52 @@
         <li><a href="#">LinkedIn</a></li>
       </ul>
       <div class="redes">
-        <a href="#"><img src="Desing/facebook.png" alt="Facebook" width="30px" /></a>
-        <a href="#"><img src="Desing/gorjeo.png" alt="Twitter" width="30px" /></a>
-        <a href="#"><img src="Desing/instagram.png" alt="Instagram" width="30px" /></a>
+        <a href="#"><img src="Desing/facebook.png" alt="Facebook" width="30px"></a>
+        <a href="#"><img src="Desing/gorjeo.png" alt="Twitter" width="30px"></a>
+        <a href="#"><img src="Desing/instagram.png" alt="Instagram" width="30px"></a>
       </div>
     </div>
     <div class="footer_bottom">
-        © 2025 OdontoClinic Rosalba Rojas. Todos los derechos reservados.
-        <a href="#">Política de privacidad</a> |
+      © 2025 OdontoClinic Rosalba Rojas. Todos los derechos reservados.
+      <div>
+        <a href="politica.html">Política de privacidad</a> |
         <a href="#">Términos y condiciones</a>
       </div>
-      
+      <a href="#top" class="back-to-top">Volver al inicio ↑</a>
+    </div>
   </footer>
-</body>
 
+  <!-- Overlay y formulario -->
+  <div id="overlay" onclick="cerrarFormularioCita()"></div>
+  <div id="citaForm">
+    <h2>Agenda Tu Cita</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="date" name="fecha" required>
+      <select name="servicio" required>
+        <option value="">Seleccione un tratamiento</option>
+        <option value="Ortodoncia">Ortodoncia</option>
+        <option value="Diseño de sonrisa">Diseño de sonrisa</option>
+        <option value="Implantes">Implantes</option>
+        <option value="Blanqueamiento">Blanqueamiento</option>
+      </select>
+      <textarea name="mensaje" rows="3" placeholder="Mensaje opcional"></textarea>
+      <button type="submit">Enviar cita</button>
+    </form>
+  </div>
+
+  <script>
+    function abrirFormularioCita() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('citaForm').style.display = 'block';
+    }
+
+    function cerrarFormularioCita() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('citaForm').style.display = 'none';
+    }
+  </script>
+</body>
 </html>
