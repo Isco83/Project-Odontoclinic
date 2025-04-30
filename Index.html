@@ -22,7 +22,7 @@
 
 <body>
   <div class="banner_covid">
-    <h3><a href="#">Ver Protocolo Covid-19</a></h3>
+    <h3><a href="Page/Protocolo COVID-19.html">Ver Protocolo Covid-19</a></h3>
   </div>
 
   <header class="container_header">
@@ -68,11 +68,28 @@
   </header>
 
   <section class="container">
+    <h2 style="text-align: center; margin-bottom: 30px;">Nuestros Servicios</h2>
     <div class="photobanner">
-      <img src="Desing/ortodoncia.jpg" alt="Ortodoncia">
-      <img src="Desing/1678213498081.jpg" alt="Paciente Sonriente">
-      <img src="Desing/pediatria.jpg" alt="Odontología Pediátrica">
-      <img src="Desing/sonrisas.jpg" alt="Diseño de Sonrisa">
+      <div class="glass" style="max-width: 300px; padding: 20px; border-radius: 12px; text-align: center;">
+        <img src="Desing/ortodoncia.jpg" alt="Ortodoncia" style="width: 100%; border-radius: 8px;">
+        <h3 style="margin-top: 15px; color: #226bc3;">Ortodoncia</h3>
+        <p>Tratamientos modernos para alinear tu sonrisa con tecnología de punta y atención personalizada.</p>
+      </div>
+      <div class="glass" style="max-width: 300px; padding: 20px; border-radius: 12px; text-align: center;">
+        <img src="Desing/sonrisas.jpg" alt="Blanqueamiento" style="width: 100%; border-radius: 8px;">
+        <h3 style="margin-top: 15px; color: #226bc3;">Blanqueamiento</h3>
+        <p>Recupera el brillo natural de tus dientes de forma segura y efectiva.</p>
+      </div>
+      <div class="glass" style="max-width: 300px; padding: 20px; border-radius: 12px; text-align: center;">
+        <img src="Desing/Implantes Dentales.jpg" alt="Implantes Dentales" style="width: 100%; border-radius: 8px;">
+        <h3 style="margin-top: 15px; color: #226bc3;">Implantes</h3>
+        <p>Soluciones estéticas y funcionales para recuperar piezas dentales con naturalidad.</p>
+      </div>
+      <div class="glass" style="max-width: 300px; padding: 20px; border-radius: 12px; text-align: center;">
+        <img src="Desing/pediatria.jpg" alt="Implantes Dentales" style="width: 100%; border-radius: 8px;">
+        <h3 style="margin-top: 15px; color: #226bc3;">Odonto-Pediatría</h3>
+        <p>Atención dental especializada para niños en un ambiente seguro y amigable.</p>
+      </div>
     </div>
   </section>
 
@@ -145,5 +162,18 @@
       document.getElementById('citaForm').style.display = 'none';
     }
   </script>
+
+<script>
+  // Mostrar animaciones scroll-fade al hacer scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    });
+
+    document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
+  });
+</script>
 </body>
 </html>
