@@ -1,0 +1,48 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f9ff;
+    color: #333;
+    padding: 60px 20px 100px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h1 {
+    color: #226bc3;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: #2a2a2a;
+    margin-top: 30px;
+    font-size: 1.5em;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  .footer-politica {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  .back-to-home {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #226bc3;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-to-home:hover {
+    background-color: #114a96;
+  }
