@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión - OdontoClinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+<link rel="stylesheet" href="../Css/login.css">
+
+</head>
+
+<body>
+  <div class="logo">
+    <img src="../img/logo-removebg-preview.png" alt="logo-removebg-preview" style="width: 90px; margin-top: 20px;">
+  </div>
+  
+
+  <div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <p>Portal OdontoClinic - Acceso múltiple</p>
+
+    <form>
+      <select required>
+        <option value="">Tipo de usuario</option>
+        <option value="paciente">Paciente</option>
+        <option value="doctor">Doctor</option>
+        <option value="admin">Administrador</option>
+      </select>
+      <select required>
+        <option value="">Tipo de identificación</option>
+        <option value="cc">Cédula de ciudadanía</option>
+        <option value="ti">Tarjeta de identidad</option>
+        <option value="ce">Cédula extranjera</option>
+      </select>
+      <input type="text" placeholder="Número de identificación" required style="height: auto;">
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar sesión</button>
+      <a href="#">¿Has olvidado tu contraseña?</a>    
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>¿Aún no tienes una cuenta? <a href="#">Crear una cuenta</a></p>
+    <p>© 2025 OdontoClinic | <a href="#">Ayuda</a> | <a href="#">Privacidad</a> | <a href="#">Seguridad</a></p>
+  </div>
+</body>
+
+</html>
