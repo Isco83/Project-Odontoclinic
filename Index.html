@@ -18,6 +18,9 @@
   <!-- Estilo principal -->
   <link rel="stylesheet" href="Css/style.css" />
 
+  <!-- script principal -->
+   <script src="Js/script.js"></script>
+
 </head>
 
 <body>
@@ -151,29 +154,5 @@
     </form>
   </div>
 
-  <script>
-    function abrirFormularioCita() {
-      document.getElementById('overlay').style.display = 'block';
-      document.getElementById('citaForm').style.display = 'block';
-    }
-
-    function cerrarFormularioCita() {
-      document.getElementById('overlay').style.display = 'none';
-      document.getElementById('citaForm').style.display = 'none';
-    }
-  </script>
-
-<script>
-  // Mostrar animaciones scroll-fade al hacer scroll
-  document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      });
-    });
-
-    document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
-  });
-</script>
 </body>
 </html>
