@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noti-Clinic - Noticias y Eventos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+        <!-- Estilos CSS -->
+<link rel="stylesheet" href="../Css/Noti-clinic.css">
+
+</head>
+<body>
+  <header>
+    <h1>Noti-Clinic</h1>
+    <p>Últimas noticias, eventos y promociones especiales en OdontoClinic</p>
+  </header>
+
+  <div class="container">
+    <div class="filters">
+      <button class="active" data-filter="all">Todos</button>
+      <button data-filter="noticia">Noticias</button>
+      <button data-filter="evento">Eventos</button>
+      <button data-filter="promo">Promociones</button>
+    </div>
+    <div class="grid">
+      <div class="card show" data-cat="evento">
+        <img src="../Desing/congreso.png" alt="Evento Odontológico">
+        <div class="card-body">
+          <h3>Jornada de salud oral gratuita</h3>
+          <p>Este sábado realizamos atención preventiva gratuita para la comunidad. Participa y cuida tu sonrisa.</p>
+          <a href="#">Leer más</a>
+        </div>
+      </div>
+      <div class="card show" data-cat="noticia">
+        <img src="../Desing/escaner 3d.jpg" alt="Nueva Tecnología">
+        <div class="card-body">
+          <h3>Incorporamos escáner 3D</h3>
+          <p>Con nuestro nuevo escáner digital mejoramos la precisión de diagnósticos y tratamientos personalizados.</p>
+          <a href="#">Ver detalles</a>
+        </div>
+      </div>
+      <div class="card show" data-cat="evento">
+        <img src="../Desing/charla-colegio-01.jpg" alt="Charla educativa">
+        <div class="card-body">
+          <h3>Charla sobre higiene oral en colegios</h3>
+          <p>OdontoClinic lleva la prevención dental a las aulas con campañas escolares de educación bucal.</p>
+          <a href="#">Conoce la iniciativa</a>
+        </div>
+      </div>
+      <div class="card show" data-cat="promo">
+        <img src="../Desing/ceremonia.webp" alt="Reconocimiento del equipo">
+        <div class="card-body">
+          <h3>Reconocimiento a nuestro equipo</h3>
+          <p>Celebramos el compromiso de nuestro personal con una ceremonia especial y muchas sorpresas.</p>
+          <a href="#">Galería del evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.filters button');
+    const cards = document.querySelectorAll('.card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          card.classList.remove('show');
+          if (filter === 'all' || card.dataset.cat === filter) {
+            card.classList.add('show');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

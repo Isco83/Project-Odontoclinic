@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom, #f4f9ff, #ffffff);
+  }
+  header {
+    background: url('../Desing/Curve\ Line.svg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 70px 20px 40px;
+    position: relative;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  .filters {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .filters button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .filters button:hover,
+  .filters button.active {
+    background-color: #001f4d;
+    transform: scale(1.05);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    display: none;
+  }
+  .card.show {
+    display: block;
+    animation: slideUp 0.5s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .card-body h3 {
+    margin: 0 0 10px;
+    color: #003366;
+    font-size: 1.3rem;
+  }
+  .card-body p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  .card-body a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .card-body a:hover {
+    color: #004080;
+    text-decoration: underline;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }

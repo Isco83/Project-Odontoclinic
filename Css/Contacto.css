@@ -6,7 +6,7 @@ body {
   }
 
   header {
-    background-color: #003366;
+    background: url('../Desing/Curve\ Line.svg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 60px 20px 40px;
@@ -55,6 +55,13 @@ body {
     transform: scale(1.2);
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
   }
+
+  .info-box img{
+    transition: transform 0.3s ease;
+  }
+
+  .info-box img:hover {
+    transform: scale(1.2);}  
 
   iframe {
     width: 100%;
