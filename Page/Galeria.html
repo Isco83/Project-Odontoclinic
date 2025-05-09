@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de la Clínica</title>
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../Css/Galeria.css">
+
+</head>
+<body>
+
+  <header>
+    <h1 class="fw-bold">Galería de Nuestra Clínica</h1>
+    <p class="lead">Conoce nuestras instalaciones y el trabajo que realizamos con pasión y compromiso</p>
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel-slide" id="carouselSlide">
+      <div class="carousel-item">
+        <img src="../img/modernas instalaciones.jpg" alt="Instalaciones modernas">
+        <div class="carousel-caption">Instalaciones modernas</div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/equipohumano.jpg" alt="Equipo humano">
+        <div class="carousel-caption">Equipo humano</div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/cliente feliz.jpg" alt="Pacientes felices">
+        <div class="carousel-caption">Pacientes felices</div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/tratamientos real.jpg" alt="Tratamientos reales">
+        <div class="carousel-caption">Tratamientos reales</div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/sala-de-espera-de-la-clinica-dental-1.jpg" alt="Áreas de espera confortables">
+        <div class="carousel-caption">Áreas de espera confortables</div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button onclick="moveSlide(-1)">&#10094;</button>
+      <button onclick="moveSlide(1)">&#10095;</button>
+    </div>    
+  </div>
+
+  <div style="text-align:center">
+    <a href="../Index.html" class="back-to-home">Volver al inicio</a>
+  </div>
+
+  <script>
+    const slide = document.getElementById('carouselSlide');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+      currentIndex = (currentIndex + direction + totalItems) % totalItems;
+      slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(() => moveSlide(1), 5000);
+  </script>
+</body>
+</html>
