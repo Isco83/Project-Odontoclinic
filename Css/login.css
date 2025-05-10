@@ -9,6 +9,26 @@
       margin: 0;
     }
 
+    .logo img {
+      width: 100px;
+      margin-top: 20px;
+
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #f0f2f5;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
 
     .login-container {
       background-color: white;
@@ -79,7 +99,7 @@
     }
 
     .footer {
-      margin-top: 40px;
+      margin-top: 10px;
       font-size: 0.8rem;
       color: #777;
       text-align: center;

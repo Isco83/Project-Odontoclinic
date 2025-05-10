@@ -330,7 +330,7 @@
   
   /* Footer */
   footer {
-    background-color: #010a30;
+    background-color: hsl(229, 96%, 10%);
     color: white;
     padding: 60px 0 20px;
     font-size: 14px;

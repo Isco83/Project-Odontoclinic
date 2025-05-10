@@ -8,6 +8,10 @@
 <!-- Estilo CSS -->
 <link rel="stylesheet" href="../Css/odontopediatria.css">
 
+  <!-- script principal -->
+<script src="../Js/script.js"></script>
+
+
 </head>
 <body>
   <header>
@@ -27,8 +31,12 @@
         La salud bucal de los niños es nuestra prioridad. En nuestra clínica contamos con un equipo especializado en odontopediatría para garantizar una atención cariñosa, profesional y adaptada a las necesidades de los más pequeños.
         Nos enfocamos en crear una experiencia positiva desde el primer momento.
       </p>
-      <button>Solicitar Cita</button>
+
+      <button onclick="abrirFormularioCita()">Agenda Tu Cita</button>      
     </div>
+
+
+
     <div class="img-box">
       <img src="../Desing/odontopedia.jpg" alt="Ilustración de odontopediatría">
     </div>
@@ -37,5 +45,27 @@
   <footer>
     &copy; 2025 Clínica Dental. Todos los derechos reservados.
   </footer>
+
+
+  <!-- Overlay y formulario -->
+  <div id="overlay" onclick="cerrarFormularioCita()"></div>
+  <div id="citaForm">
+    <h2>Agenda Tu Cita</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="date" name="fecha" required>
+      <select name="servicio" required>
+        <option value="">Seleccione un tratamiento</option>
+        <option value="Ortodoncia">Ortodoncia</option>
+        <option value="Diseño de sonrisa">Diseño de sonrisa</option>
+        <option value="Implantes">Implantes</option>
+        <option value="Blanqueamiento">Blanqueamiento</option>
+      </select>
+      <textarea name="mensaje" rows="3" placeholder="Mensaje opcional"></textarea>
+      <button type="submit">Enviar cita</button>
+    </form>
+  </div>
 </body>
 </html>
