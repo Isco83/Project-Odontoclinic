@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ortodoncia</title>
+
+  <!-- Estilo CSS -->
+<link rel="stylesheet" href="../Css/odontopediatria.css">
+
+  <!-- script principal -->
+<script src="../Js/script.js"></script>
+  
+</head>
+
+<body>
+  <header>
+    <h1>Rosalba Rojas - OdontoClinic</h1>
+  </header>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="#">Equipo</a>
+    <a href="../Page/Contacto.html">Contacto</a>
+  </nav>
+
+  <section class="section">
+    <div class="text-box">
+      <h2>Ortodoncia</h2>
+      <p>
+        La ortodoncia permite alinear tus dientes, mejorar tu mordida y conseguir una sonrisa estética y funcional. Utilizamos tecnología moderna y técnicas cómodas como brackets estéticos y alineadores transparentes para adaptarnos a tu estilo de vida y necesidades específicas.
+      </p>
+      <button onclick="abrirFormularioCita()">Agenda Tu Cita</button>
+    </div>
+    <div class="img-box">
+      <img src="../Desing/ortodonciapage.jpg" alt="Ilustración de ortodoncia">
+    </div>
+  </section>
+
+  <footer>
+    &copy; © 2025 OdontoClinic Rosalba Rojas. Todos los derechos reservados.
+  </footer>
+
+  <!-- Overlay y formulario -->
+  <div id="overlay" onclick="cerrarFormularioCita()"></div>
+  <div id="citaForm">
+    <h2>Agenda Tu Cita</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="date" name="fecha" required>
+      <select name="servicio" required>
+        <option value="">Seleccione un tratamiento</option>
+        <option value="Ortodoncia">Ortodoncia</option>
+        <option value="Diseño de sonrisa">Diseño de sonrisa</option>
+        <option value="Implantes">Implantes</option>
+        <option value="Blanqueamiento">Blanqueamiento</option>
+      </select>
+      <textarea name="mensaje" rows="3" placeholder="Mensaje opcional"></textarea>
+      <button type="submit">Enviar cita</button>
+    </form>
+  </div>
+</body>
+</html>
